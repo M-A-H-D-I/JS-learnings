@@ -1,2 +1,2 @@
-# java-learning-
+My first project learnings 
 JS learnings
