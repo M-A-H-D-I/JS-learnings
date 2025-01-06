@@ -120,6 +120,7 @@ const getWinnings = (rows, bet, lines) => {
                 break ;
             }
         }
+        while {
         if (allsame) {
             winnings += bet * SYMBOLS_VALUES[symbols[0]]
         }
@@ -127,7 +128,7 @@ const getWinnings = (rows, bet, lines) => {
 
     return winnings ;
 };
-
+}
 
  //console.log(deposi  t()); instead of doing this we will put it in a const veriable so we can call it later
  let balance =deposit();
