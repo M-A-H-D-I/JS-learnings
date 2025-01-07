@@ -126,7 +126,7 @@ const getWinnings = (rows, bet, lines) => {
             winnings += bet * SYMBOLS_VALUES[symbols[0]]
         }
     } */
-
+// try harder 
     return winnings ;
 };
 }
