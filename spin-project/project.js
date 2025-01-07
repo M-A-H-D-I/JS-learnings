@@ -120,11 +120,12 @@ const getWinnings = (rows, bet, lines) => {
                 break ;
             }
         }
-        while {
+        /* while {
         if (allsame) {
+            for
             winnings += bet * SYMBOLS_VALUES[symbols[0]]
         }
-    }
+    } */
 
     return winnings ;
 };
