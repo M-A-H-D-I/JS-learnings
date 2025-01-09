@@ -120,32 +120,44 @@ const getWinnings = (rows, bet, lines) => {
                 break ;
             }
         }
-        /* while {
+        
         if (allsame) {
-            for
-            winnings += bet * SYMBOLS_VALUES[symbols[0]]
+            winnings += bet * SYMBOL_VALUES[symbols[0]];
         }
-    } */
-// try harder 
+    } 
+
     return winnings ;
 };
-}
 
- //console.log(deposi  t()); instead of doing this we will put it in a const veriable so we can call it later
- let balance =deposit();
+const game = () => {
+    let balance =deposit();
+//console.log(deposit()); instead of doing this we will put it in a const veriable so we can call it later
+while (true) {
+    console.log("You have a balance of $" + balance);
  //console.log(depositMoney);
  const numberOfLines = getNumberOfLines();
 //console.log(numberOfLines);
 const bet=getBet(balance,numberOfLines);
+balance -= bet* numberOfLines ;
 const reels  = spin();
 const rows = transpose(reels);
 //console.log (reels);
 //console.log(rows);
 printRows(rows);
 const winnings = getWinnings(rows,bet,numberOfLines);
+balance += winnings ;
 console.log("you won $" + winnings.toString())
 
+if (balance <=0 ) {
+    console.log("You are out of money :( ")
+    break ; 
+        }
 
+        const playAgain =prompt("Play again (y/n)?")
+        if (playAgain != "y") break ;
+    }
+} ; 
 
+game();
 
  
